@@ -17,7 +17,7 @@ public class CaseTest {
     public void testGetContenu() throws Exception {
         Case testCase = new Case("Depart");
         assertEquals(testCase.getContenu(), null);
-        Joueur testJoueur = new Joueur("testNom");
+        IJoueur testJoueur = new IJoueur("testNom");
         testCase.setContenu(testJoueur);
         assertEquals(testCase.getContenu(), testJoueur);
     }
@@ -25,7 +25,7 @@ public class CaseTest {
     @Test
     public void testSetContenu() throws Exception {
         Case testCase = new Case("Depart");
-        Joueur testJoueur = new Joueur("testNom");
+        IJoueur testJoueur = new IJoueur("testNom");
         testCase.setContenu(testJoueur);
         assertNotNull(testCase.getContenu());
         testCase.setContenu(null);

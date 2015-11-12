@@ -4,7 +4,7 @@
 public class Case {
 
     private String nom;
-    private Joueur contenu;
+    private IJoueur contenu;
 
     Case(String nom) {
         this.nom = nom;
@@ -14,7 +14,7 @@ public class Case {
         return nom;
     }
 
-    public Joueur getContenu() {
+    public IJoueur getContenu() {
         return contenu;
     }
 

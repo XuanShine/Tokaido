@@ -22,11 +22,7 @@ public class IJoueur {
         this.position = position;
     }
 
-    public void avancer(int n, Plateau plateau) {
-        //plateau.getCase(position).setContenu(null);
-        //plateau.getCase(position + n).setContenu(this);
-        plateau.enleverJoueur(this);
-        plateau.placerJoueur(this, n + position);
+    public void avancer(int n) {
         position += n;
         System.out.println(nom + " a avancé de " + n + " case(s)");
     }
