@@ -18,7 +18,7 @@ public class Case {
         return contenu;
     }
 
-    public void setContenu(Joueur contenu) {
+    public void setContenu(IJoueur contenu) {
         this.contenu = contenu;
     }
 }

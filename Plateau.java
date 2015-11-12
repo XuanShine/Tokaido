@@ -4,12 +4,12 @@
 public class Plateau {
 
     private Case[] listCase = {new Case("Depart"), new Case("1"), new Case("2"), new Case("3"), new Case("4"), new Case("Fin")};
-    private Joueur[] listJoueur;
+    private IJoueur[] listJoueur;
     private int DEPART = 0;
     private int FIN = listCase.length - 1;
 
-    Plateau(Joueur joueur, Joueur j2) {
-        listJoueur = new Joueur[2];
+    Plateau(IJoueur joueur, IJoueur j2) {
+        listJoueur = new IJoueur[2];
         listJoueur[0] = joueur;
         listJoueur[1] = j2;
 
@@ -24,7 +24,7 @@ public class Plateau {
         return listCase[n];
     }
 
-    public void enleverJoueur(Joueur joueur) {
+    public void enleverJoueur(IJoueur joueur) {
         for (Case theCase : listCase) {
             if (theCase.getContenu() == joueur) {
                 theCase.setContenu(null);
@@ -34,7 +34,7 @@ public class Plateau {
         throw new Error("Pas de joueur " + joueur.getNom() + " dans le jeu");
     }
 
-    public void placerJoueur(Joueur joueur, int theCase) {
+    public void placerJoueur(IJoueur joueur, int theCase) {
         if (listCase[theCase].getContenu() == null) {
             listCase[theCase].setContenu(joueur);
         } else {
@@ -47,7 +47,7 @@ public class Plateau {
         return getCase(FIN).getContenu() != null;
     }
 
-    public Joueur tourDuJoueur() {
+    public IJoueur tourDuJoueur() {
         for (Case theCase : listCase) {
             if (theCase.getContenu() != null) {
                 return theCase.getContenu();
