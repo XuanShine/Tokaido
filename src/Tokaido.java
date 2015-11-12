@@ -3,8 +3,8 @@
  */
 public class Tokaido {
     public static void main(String[] args) {
-        IJoueur paul = new IJoueur("Paul");
-        IJoueur jean = new IJoueur("Jean");
+        IJoueur paul = new Robot("Paul");
+        IJoueur jean = new Robot("Jean");
 
         Plateau plateau = new Plateau(paul, jean);
         while (!plateau.isFinPartie()) {
